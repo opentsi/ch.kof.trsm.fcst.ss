@@ -15,7 +15,6 @@ length(ss)
 kss <- read.xlsx("kof_trsm_ss.xlsx", sheetIndex = 1)
 nkss <- names(kss)[-1]
 length(nkss) # 12
-nkss 
 # Check which keys from the tsdbapi list are also present in the public xlsx names
 match_ss <- ss[ss %in% nkss]
 length(match_ss) # 12 -> matches
@@ -58,7 +57,7 @@ validate_metadata(meta) # TRUE
 ## Step 6: Write handle_update & process_data
 
 ## Step 7: Seal Archive
-key <- "f39a0eb9f5afa9127ecf0f8c55e87b8efab6a62da7c0b1ba8f79ceac6c2fa85a"
+key <- "..."
 devtools::load_all()
 library(digest)
 checksum_input <- generate_checksum_input(key = key)

@@ -3,8 +3,8 @@
   "provider": "kof",
   "dataset": "trsm_fcst_ss",
   "title": {
-    "en": "KOF Forecasts of Summer Season Tourism in Switzerland",
-    "de": "KOF Sommerprognosen für den Schweizer Tourismus"
+    "en": "KOF Tourism Forecast for Switzerland: Overnight Stays per Summer Season",
+    "de": "KOF Tourismusprognose für die Schweiz: Logiernächte pro Sommersaison"
   },
   "source_name": {
     "en": "KOF Swiss Economic Institute",
@@ -21,15 +21,16 @@
   "aggregate": {
     "all": "sum"
   },
-  "dim_order": [
-    "origin",
-    "region"
-  ],
+  "dim_order": ["measure", "origin", "region", "unit"],
   "hierarchy": {
+    "measure": {
+      "l": {}
+    },
     "origin": {
-      "all": {},
-      "che": {},
-      "for": {},
+      "all": {
+        "che": {},
+        "for": {}
+      },
       "deu": {},
       "fra": {},
       "ita": {},
@@ -38,14 +39,22 @@
       "rest": {}
     },
     "region": {
-      "ch": {},
-      "alpin": {},
-      "city": {},
-      "rest": {}
+      "ch": {
+        "alpin": {},
+        "city": {},
+        "rest": {}
+      }
+    },
+    "unit": {
+      "lg": {}
     }
   },
   "labels": {
     "dimnames": {
+      "measure": {
+        "en": "Measure",
+        "de": "Messgrösse"
+      },
       "origin": {
         "en": "Origin of visitors",
         "de": "Herkunft der Gäste"
@@ -53,6 +62,16 @@
       "region": {
         "en": "Region",
         "de": "Region"
+      },
+      "unit": {
+        "en": "Unit",
+        "de": "Einheit"
+      }
+    },
+    "measure": {
+      "l": {
+        "en": "Level",
+        "de": "Niveau"
       }
     },
     "origin": {
@@ -89,8 +108,8 @@
         "de": "China"
       },
       "rest": {
-        "en": "Rest of the world",
-        "de": "Übrige Welt"
+        "en": "Other foreign markets",
+        "de": "Übrige ausländische Märkte"
       }
     },
     "region": {
@@ -109,6 +128,12 @@
       "rest": {
         "en": "Rest of Switzerland",
         "de": "Übriges Mittelland"
+      }
+    },
+    "unit": {
+      "lg": {
+        "en": "Overnight stays",
+        "de": "Logiernächte"
       }
     }
   },
